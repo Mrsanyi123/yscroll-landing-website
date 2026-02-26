@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        @apply scroll-smooth;
+    }
+
+    body {
+        @apply antialiased;
+    }
+}
+
+@layer utilities {
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+
+    @keyframes float-delayed {
+
+        0%,
+        100% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-15px);
+        }
+    }
+
+    @keyframes progress {
+        0% {
+            stroke-dashoffset: 251.2;
+        }
+
+        100% {
+            stroke-dashoffset: 125.6;
+        }
+    }
+
+    @keyframes scroll-left {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    @keyframes scroll-right {
+        0% {
+            transform: translateX(-50%);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .animate-float {
+        animation: float 4s ease-in-out infinite;
+    }
+
+    .animate-float-delayed {
+        animation: float-delayed 5s ease-in-out infinite;
+        animation-delay: 0.5s;
+    }
+
+    .animate-progress {
+        animation: progress 2s ease-out forwards;
+    }
+
+    .animate-float-slow {
+        animation: float 6s ease-in-out infinite;
+    }
+
+    .animate-scroll-left {
+        animation: scroll-left 50s linear infinite;
+    }
+
+    .animate-scroll-right {
+        animation: scroll-right 50s linear infinite;
+    }
+
+    .mask-fade-x {
+        mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    }
+}

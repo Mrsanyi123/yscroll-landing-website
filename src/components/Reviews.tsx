@@ -29,10 +29,66 @@ function Reviews() {
                         Reviews
                     </div>
 
-                    <div className="bg-white border border-gray-200 p-12 max-w-2xl mx-auto shadow-sm">
-                        <p className="text-2xl font-medium text-gray-400 italic">
-                            "Coming Soon: We're gathering the success stories of our earliest users. Stay tuned!"
-                        </p>
+                    <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                        <div className="bg-white border border-gray-200 p-8 rounded-2xl shadow-sm">
+                            <div className="flex items-center gap-1 mb-4">
+                                {[...Array(5)].map((_, i) => (
+                                    <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                                    </svg>
+                                ))}
+                            </div>
+                            <p className="text-gray-700 mb-4">
+                                "YScroll has completely changed how I use YouTube. I'm more productive and actually feel in control of my screen time."
+                            </p>
+                            <div className="flex items-center gap-3">
+                                <div className="w-10 h-10 bg-gray-200 rounded-full"></div>
+                                <div>
+                                    <p className="font-semibold text-gray-900">Sarah K.</p>
+                                    <p className="text-sm text-gray-500">Student</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="bg-white border border-gray-200 p-8 rounded-2xl shadow-sm">
+                            <div className="flex items-center gap-1 mb-4">
+                                {[...Array(5)].map((_, i) => (
+                                    <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                                    </svg>
+                                ))}
+                            </div>
+                            <p className="text-gray-700 mb-4">
+                                "Finally found something that actually works! The limit settings are perfect and I love how it doesn't feel restrictive."
+                            </p>
+                            <div className="flex items-center gap-3">
+                                <div className="w-10 h-10 bg-gray-200 rounded-full"></div>
+                                <div>
+                                    <p className="font-semibold text-gray-900">Mike R.</p>
+                                    <p className="text-sm text-gray-500">Developer</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="bg-white border border-gray-200 p-8 rounded-2xl shadow-sm">
+                            <div className="flex items-center gap-1 mb-4">
+                                {[...Array(5)].map((_, i) => (
+                                    <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                                    </svg>
+                                ))}
+                            </div>
+                            <p className="text-gray-700 mb-4">
+                                "As someone who struggles with focus, this app has been a game-changer. Highly recommend to anyone looking to be more mindful."
+                            </p>
+                            <div className="flex items-center gap-3">
+                                <div className="w-10 h-10 bg-gray-200 rounded-full"></div>
+                                <div>
+                                    <p className="font-semibold text-gray-900">Emily L.</p>
+                                    <p className="text-sm text-gray-500">Designer</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

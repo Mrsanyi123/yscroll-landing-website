@@ -1,4 +1,5 @@
 import { Linkedin, Twitter, Github, Youtube } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
@@ -61,13 +62,16 @@ function Footer() {
                         <div>
                             <h4 className="text-gray-900 font-bold text-lg mb-6">Legal</h4>
                             <ul className="space-y-4">
-                                {['Privacy', 'Terms'].map((item) => (
-                                    <li key={item}>
-                                        <a href={`/${item.toLowerCase().replace(' ', '-')}`} className="text-gray-500 hover:text-gray-900 transition-colors">
-                                            {item}
-                                        </a>
-                                    </li>
-                                ))}
+                                <li>
+                                    <Link to="/privacy" className="text-gray-500 hover:text-gray-900 transition-colors">
+                                        Privacy
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/terms" className="text-gray-500 hover:text-gray-900 transition-colors">
+                                        Terms
+                                    </Link>
+                                </li>
                             </ul>
                         </div>
 

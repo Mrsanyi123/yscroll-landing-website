@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 interface NavigationProps {
     variant?: 'light' | 'dark';
@@ -30,21 +31,35 @@ function Navigation({ variant = 'light' }: NavigationProps) {
 
                 </div>
                 <div className="hidden md:flex items-center gap-8">
-                    {['Features', 'Reviews', 'Support'].map((item) => (
+                    {['Features', 'Reviews'].map((item) => (
                         <a
                             key={item}
-                            href={
-                                item === 'Support'
-                                    ? 'https://www.buymeacoffee.com/sanyidiriba'
-                                    : `#${item.toLowerCase()}`
-                            }
-                            target={item === 'Support' ? '_blank' : undefined}
-                            rel={item === 'Support' ? 'noopener noreferrer' : undefined}
+                            href={`#${item.toLowerCase()}`}
                             className="text-gray-500 hover:text-gray-900 transition-colors duration-300 text-[15px] font-medium"
                         >
                             {item}
                         </a>
                     ))}
+                    <a
+                        href="https://www.buymeacoffee.com/sanyidiriba"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-500 hover:text-gray-900 transition-colors duration-300 text-[15px] font-medium"
+                    >
+                        Support
+                    </a>
+                    <Link
+                        to="/privacy"
+                        className="text-gray-500 hover:text-gray-900 transition-colors duration-300 text-[15px] font-medium"
+                    >
+                        Privacy
+                    </Link>
+                    <Link
+                        to="/terms"
+                        className="text-gray-500 hover:text-gray-900 transition-colors duration-300 text-[15px] font-medium"
+                    >
+                        Terms
+                    </Link>
                 </div>
             </div>
         </nav>

@@ -16,6 +16,17 @@ function Footer() {
                         <p className="text-gray-500 text-lg mb-8 leading-relaxed">
                             Stop the endless scrolling and focus on what matters. Your time is valuable.
                         </p>
+                            <p>
+                                Telegram Channel: 
+                                <a 
+                                    href="https://t.me/thesanyi" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="text-blue-500 hover:underline ml-1"
+                                >
+                                    @thesanyi
+                                </a>
+                            </p>               
                         <div className="flex gap-6">
                             {[
                                 { icon: Linkedin, href: "https://www.linkedin.com/in/sanyi-diriba/", name: 'LinkedIn' },

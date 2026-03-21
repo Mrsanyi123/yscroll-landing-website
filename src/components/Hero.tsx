@@ -45,7 +45,7 @@ export default function Hero() {
                         <img
                             src="/hero.png"
                             alt="YScroll app screens"
-                            className="w-full h-auto max-w-none mx-auto object-cover rounded-lg shadow-lg"
+                            className="w-full max-w-12xl mx-auto object-cover"
                         />
                     </div>
                 </div>

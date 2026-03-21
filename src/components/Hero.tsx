@@ -9,14 +9,14 @@ export default function Hero() {
     }, []);
 
     return (
-        <div className="min-h-screen bg-white pt-32 md:pt-40">
-            <div className="max-w-[1400px] mx-auto px-8 md:px-16">
-                <div className="grid md:grid-cols-2 gap-8 items-start mb-12">
+        <div className="min-h-screen bg-white pt-24 sm:pt-28 md:pt-32 lg:pt-40">
+            <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-16">
+                <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start mb-12">
                     <div
                         className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                             }`}
                     >
-                        <h1 className="text-3xl md:text-5xl font-bold leading-tight text-gray-900 mb-8">
+                        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-900 mb-6 sm:mb-8">
                             Stop Endless Scrolling,
                             <br />
                             take control of your time
@@ -25,9 +25,9 @@ export default function Hero() {
 
                     <div
                         className={`transition-all duration-1000 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-                            } flex flex-col items-end`}
+                            } flex flex-col lg:items-end items-center lg:text-right text-center`}
                     >
-                        <p className="text-gray-500 text-lg md:text-2xl mb-8 text-right max-w-md">
+                        <p className="text-gray-500 text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 max-w-lg">
                             yscroll helps you limit endless scrolling, stay focused, and get
                             more work done.
                         </p>
@@ -37,7 +37,7 @@ export default function Hero() {
                     </div>
                 </div>
 
-                <div className="relative mt-20">
+                <div className="relative mt-12 sm:mt-16 lg:mt-20">
                     <div
                         className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
                             }`}
@@ -45,7 +45,7 @@ export default function Hero() {
                         <img
                             src="/hero.png"
                             alt="YScroll app screens"
-                            className="w-full max-w-12xl mx-auto object-cover"
+                            className="w-full h-auto max-w-none mx-auto object-cover rounded-lg shadow-lg"
                         />
                     </div>
                 </div>

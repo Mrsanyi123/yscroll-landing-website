@@ -51,19 +51,19 @@ function FAQ() {
     ];
 
     return (
-        <div ref={sectionRef} id="faq" className="bg-white py-20 md:py-32">
-            <div className="max-w-[1000px] mx-auto px-8 md:px-16">
-                <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                    <div className="inline-block bg-gray-100 text-gray-600 px-5 py-2 rounded-full text-sm font-medium mb-6">
+        <div ref={sectionRef} id="faq" className="bg-white py-16 sm:py-20 md:py-32">
+            <div className="max-w-[1000px] mx-auto px-4 sm:px-6 md:px-16">
+                <div className={`text-center mb-12 sm:mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                    <div className="inline-block bg-gray-100 text-gray-600 px-4 py-2 rounded-full text-sm font-medium mb-4 sm:mb-6">
                         FAQ
                     </div>
-                    <h2 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                         Frequently asked<br />
                         questions
                     </h2>
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                     {faqs.map((faq, index) => (
                         <div
                             key={index}
@@ -72,21 +72,21 @@ function FAQ() {
                         >
                             <button
                                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                                className="w-full bg-white border border-gray-200 rounded-xl p-6 text-left hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group"
+                                className="w-full bg-white border border-gray-200 rounded-lg sm:rounded-xl p-4 sm:p-6 text-left hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group"
                             >
-                                <div className="flex items-center justify-between">
-                                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-[#5B9FED] transition-colors">
+                                <div className="flex items-center justify-between gap-4">
+                                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-[#5B9FED] transition-colors leading-tight">
                                         {faq.question}
                                     </h3>
                                     <ChevronDown
-                                        className={`w-6 h-6 text-gray-500 transition-all duration-300 flex-shrink-0 ${openIndex === index ? 'rotate-180 text-[#5B9FED]' : ''
+                                        className={`w-5 h-5 sm:w-6 sm:h-6 text-gray-500 transition-all duration-300 flex-shrink-0 ${openIndex === index ? 'rotate-180 text-[#5B9FED]' : ''
                                             }`}
                                     />
                                 </div>
 
                                 {openIndex === index && (
-                                    <div className="mt-4 pt-4 border-t border-gray-200 animate-in fade-in duration-300">
-                                        <p className="text-gray-600 leading-relaxed">
+                                    <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-gray-200 animate-in fade-in duration-300">
+                                        <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
                                             {faq.answer}
                                         </p>
                                     </div>
@@ -95,7 +95,6 @@ function FAQ() {
                         </div>
                     ))}
                 </div>
-
             </div>
         </div>
     );

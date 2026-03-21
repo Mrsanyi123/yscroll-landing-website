@@ -3,31 +3,31 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
-        <footer className="bg-gray-50 pt-24 pb-12">
-            <div className="max-w-[1400px] mx-auto px-8 md:px-16">
+        <footer className="bg-gray-50 pt-16 sm:pt-20 lg:pt-24 pb-8 sm:pb-12">
+            <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-16">
 
-                <div className="flex flex-col lg:flex-row justify-between gap-20 mb-20">
+                <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-20 mb-16">
                     {/* Brand Section */}
                     <div className="max-w-sm">
                         <div className="flex items-center gap-3 mb-6">
-                            <img src="/logo.png" alt="YScroll" className="w-10 h-10" />
-                            <span className="text-3xl font-bold text-gray-900">YScroll</span>
+                            <img src="/logo.png" alt="YScroll" className="w-8 h-8 sm:w-10 sm:h-10" />
+                            <span className="text-2xl sm:text-3xl font-bold text-gray-900">YScroll</span>
                         </div>
-                        <p className="text-gray-500 text-lg mb-8 leading-relaxed">
+                        <p className="text-gray-500 text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">
                             Stop the endless scrolling and focus on what matters. Your time is valuable.
                         </p>
-                            <p>
-                                Telegram Channel: 
-                                <a 
-                                    href="https://t.me/thesanyi" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
-                                    className="text-blue-500 hover:underline ml-1"
-                                >
-                                    @thesanyi
-                                </a>
-                            </p>               
-                        <div className="flex gap-6">
+                        <p className="text-gray-500 text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">
+                            Telegram Channel: 
+                            <a 
+                                href="https://t.me/thesanyi" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="text-blue-500 hover:underline ml-1"
+                            >
+                                @thesanyi
+                            </a>
+                        </p>               
+                        <div className="flex gap-4 sm:gap-6">
                             {[
                                 { icon: Linkedin, href: "https://www.linkedin.com/in/sanyi-diriba/", name: 'LinkedIn' },
                                 { icon: Youtube, href: "https://www.youtube.com/@Sanyi-Diriba", name: 'Youtube' },
@@ -39,21 +39,21 @@ function Footer() {
                                     href={social.href}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-12 h-12 flex items-center justify-center rounded-xl bg-white border border-gray-200 text-gray-400 hover:text-[#5B9FED] hover:border-[#5B9FED] hover:shadow-md transition-all duration-300"
+                                    className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-lg sm:rounded-xl bg-white border border-gray-200 text-gray-400 hover:text-[#5B9FED] hover:border-[#5B9FED] hover:shadow-md transition-all duration-300"
                                     aria-label={social.name}
                                 >
-                                    <social.icon className="w-5 h-5" />
+                                    <social.icon className="w-4 h-4 sm:w-5 sm:h-5" />
                                 </a>
                             ))}
                         </div>
                     </div>
 
                     {/* Navigation Section */}
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-12 sm:gap-20">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 sm:gap-12 lg:gap-20">
                         <div>
-                            <h4 className="text-gray-900 font-bold text-lg mb-6">Product</h4>
-                            <ul className="space-y-4">
-                                {['Features', 'Reviews', 'FAQ', 'Get the Chrome Extension'].map((item) => (
+                            <h4 className="text-gray-900 font-bold text-base sm:text-lg mb-4 sm:mb-6">Product</h4>
+                            <ul className="space-y-3 sm:space-y-4">
+                                {['Features', 'FAQ', 'Get the Chrome Extension'].map((item) => (
                                     <li key={item}>
                                         <a
                                             href={
@@ -61,7 +61,7 @@ function Footer() {
                                                     ? 'https://chromewebstore.google.com/detail/yscroll-stop-the-endless/hlnhamlgmoijbfhilkanhifompndjaho'
                                                     : `#${item.toLowerCase()}`
                                             }
-                                            className="text-gray-500 hover:text-gray-900 transition-colors"
+                                            className="text-gray-500 hover:text-gray-900 transition-colors text-sm sm:text-base"
                                         >
                                             {item}
                                         </a>
@@ -71,15 +71,15 @@ function Footer() {
                         </div>
                         {/* Legal */}
                         <div>
-                            <h4 className="text-gray-900 font-bold text-lg mb-6">Legal</h4>
-                            <ul className="space-y-4">
+                            <h4 className="text-gray-900 font-bold text-base sm:text-lg mb-4 sm:mb-6">Legal</h4>
+                            <ul className="space-y-3 sm:space-y-4">
                                 <li>
-                                    <Link to="/privacy" className="text-gray-500 hover:text-gray-900 transition-colors">
+                                    <Link to="/privacy" className="text-gray-500 hover:text-gray-900 transition-colors text-sm sm:text-base">
                                         Privacy
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/terms" className="text-gray-500 hover:text-gray-900 transition-colors">
+                                    <Link to="/terms" className="text-gray-500 hover:text-gray-900 transition-colors text-sm sm:text-base">
                                         Terms
                                     </Link>
                                 </li>
@@ -88,10 +88,10 @@ function Footer() {
 
                         {/* Connect */}
                         <div>
-                            <h4 className="text-gray-900 font-bold text-lg mb-6">Connect</h4>
-                            <ul className="space-y-4">
+                            <h4 className="text-gray-900 font-bold text-base sm:text-lg mb-4 sm:mb-6">Connect</h4>
+                            <ul className="space-y-3 sm:space-y-4">
                                 <li>
-                                    <a href="mailto:sanyidiriba123@gmail.com" className="text-gray-500 hover:text-gray-900 transition-colors">
+                                    <a href="mailto:sanyidiriba123@gmail.com" className="text-gray-500 hover:text-gray-900 transition-colors text-sm sm:text-base">
                                         Contact Support
                                     </a>
                                 </li>
@@ -101,7 +101,7 @@ function Footer() {
                     </div>
                 </div>
 
-                <div className="border-t border-gray-200 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div className="border-t border-gray-200 pt-6 sm:pt-10 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-gray-400 text-sm">
                         &copy; 2026 YScroll. Built by {' '}
                         <a

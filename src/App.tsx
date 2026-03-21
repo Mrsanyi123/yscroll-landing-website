@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import Features from './components/Features';
-import Reviews from './components/Reviews';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import Privacy from './components/Privacy';
@@ -14,7 +13,6 @@ function LandingPage() {
             <Navigation />
             <Hero />
             <Features />
-            <Reviews />
             <FAQ />
             <Footer />
         </>
